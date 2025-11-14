@@ -1,6 +1,1 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
- 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { pid } = req.query
-  res.end(`Post: ${pid}`)
-}
+export async function onRequestGet(context: EventContext<unknown, string, unknown>) { return new Response( JSON.stringify({ message: 'New route!' }), { headers: { 'Content-Type': 'application/json' } } ) } ```
