@@ -11,24 +11,24 @@ export default function Home() {
             <Code className="w-8 h-8 text-primary" />
           </div>
           <h1 className="text-4xl font-bold tracking-tight mb-4">
-            Cloudflare Pages Functions Template
+            Cloudflare Pages Template
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A production-ready starter template with API routes, middleware, and TypeScript support
+            Next.js on Cloudflare Pages with Edge Runtime API routes
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
           <Card>
             <CardHeader>
-              <CardTitle>API Routes</CardTitle>
-              <CardDescription>Server-side functions at the edge</CardDescription>
+              <CardTitle>Edge Runtime</CardTitle>
+              <CardDescription>Lightning-fast API routes at the edge</CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• File-based routing in /functions</li>
-                <li>• TypeScript support out of the box</li>
-                <li>• Full HTTP method support</li>
+                <li>• Runs on Cloudflare's global network</li>
+                <li>• Sub-50ms response times worldwide</li>
+                <li>• TypeScript support built-in</li>
                 <li>• Environment variable access</li>
               </ul>
             </CardContent>
@@ -36,15 +36,15 @@ export default function Home() {
 
           <Card>
             <CardHeader>
-              <CardTitle>Edge Middleware</CardTitle>
-              <CardDescription>Request/response processing</CardDescription>
+              <CardTitle>Next.js App Router</CardTitle>
+              <CardDescription>Modern React framework features</CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Global request handling</li>
-                <li>• CORS configuration</li>
-                <li>• Authentication checks</li>
-                <li>• Request logging</li>
+                <li>• Server and Client Components</li>
+                <li>• API Routes with Edge Runtime</li>
+                <li>• Dynamic route parameters</li>
+                <li>• Full TypeScript support</li>
               </ul>
             </CardContent>
           </Card>
@@ -54,14 +54,14 @@ export default function Home() {
           <Card>
             <CardHeader>
               <CardTitle>Try the API</CardTitle>
-              <CardDescription>Test the example endpoints</CardDescription>
+              <CardDescription>Test the example Edge Runtime endpoints</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid gap-4">
                 <div className="flex items-center justify-between p-4 bg-muted rounded-lg">
                   <div>
                     <p className="font-mono text-sm">GET /api/hello</p>
-                    <p className="text-xs text-muted-foreground mt-1">Simple greeting endpoint</p>
+                    <p className="text-xs text-muted-foreground mt-1">Simple greeting with timestamp</p>
                   </div>
                   <Button asChild variant="outline" size="sm">
                     <a href="/api/hello" target="_blank">Test</a>
@@ -71,7 +71,7 @@ export default function Home() {
                 <div className="flex items-center justify-between p-4 bg-muted rounded-lg">
                   <div>
                     <p className="font-mono text-sm">GET /api/time</p>
-                    <p className="text-xs text-muted-foreground mt-1">Current server time</p>
+                    <p className="text-xs text-muted-foreground mt-1">Current server time in multiple formats</p>
                   </div>
                   <Button asChild variant="outline" size="sm">
                     <a href="/api/time" target="_blank">Test</a>
@@ -81,10 +81,20 @@ export default function Home() {
                 <div className="flex items-center justify-between p-4 bg-muted rounded-lg">
                   <div>
                     <p className="font-mono text-sm">POST /api/echo</p>
-                    <p className="text-xs text-muted-foreground mt-1">Echo back request body</p>
+                    <p className="text-xs text-muted-foreground mt-1">Echo back request body as JSON</p>
                   </div>
                   <Button variant="outline" size="sm" disabled>
                     POST Only
+                  </Button>
+                </div>
+
+                <div className="flex items-center justify-between p-4 bg-muted rounded-lg">
+                  <div>
+                    <p className="font-mono text-sm">GET /api/user/[id]</p>
+                    <p className="text-xs text-muted-foreground mt-1">Dynamic route with path parameters</p>
+                  </div>
+                  <Button asChild variant="outline" size="sm">
+                    <a href="/api/user/123" target="_blank">Test</a>
                   </Button>
                 </div>
               </div>
@@ -94,7 +104,7 @@ export default function Home() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-muted-foreground">
-            Built with Cloudflare Pages Functions • Deploy to the edge in seconds
+            Deploy to Cloudflare Pages • Push to GitHub and connect your repository
           </p>
         </div>
       </div>
